@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'products');
+
+Auth::routes();
+
+Route::resource('products', 'ProductController');
